@@ -27,7 +27,7 @@ Tools setup:
     1) Go to https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.14.0;
     2) Copy Maven text;
     3) Open pom.xml in Intellij IDEA;
-    4) In pom.xml before '</project>' write '<dependencies>';
+    4) In pom.xml before "</project>" write '<dependencies>';
     5) Paste Maven text after '<dependencies>';
     6) Write after Maven text '</ependencies>'.
 6. Git is a version-control system for tracking changes in computer files and coordinating work on those files 
