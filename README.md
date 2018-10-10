@@ -45,3 +45,17 @@ Tools setup:
     4) Download 'jdk-10.0.2_windows-x64_bin.exe';
     5) Before download click 'jdk-10.0.2_windows-x64_bin.exe'
     6) Install 'jdk-10.0.2_windows-x64_bin.exe'.
+8. IntelliJ IDEA is a Java integrated development environment (IDE) for developing computer software.
+   How to install 'IntelliJ IDEA':
+   1) Go to https://www.jetbrains.com/idea/download/#section=windows;
+   2) Click 'Download' for Community version;
+   3) Download 'ideaIC-2018.2.4.exe';
+   4) Run 'ideaIC-2018.2.4.exe';
+   5) Install 'IntelliJ IDEA'.
+9. Mozilla Firefox (or simply Firefox) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary,        Mozilla Corporation.
+   How to install 'Mozilla Firefox':
+   1) Go to https://www.mozilla.org/en-US/firefox/new/;
+   2) Click 'Download Now';
+   3) Download 'Firefox Installer.exe';
+   4) Run 'Firefox Installer.exe';
+   5) Install 'Mozilla Firefox'.
