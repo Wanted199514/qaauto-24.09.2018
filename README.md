@@ -31,8 +31,10 @@ Tools setup:
 6. Git is a version-control system for tracking changes in computer files and coordinating work on those files 
    among multiple people. It is primarily used for source-code management in software development.
    How to install 'Git':
-    1) Download 'Git setup';
-    2) Run 'Git setup';
+    1) Go to https://git-scm.com/downloads;
+    2) Click 'Download 2.19.1 for Windows';
+    3) Download 'Git-2.19.1-64-bit.exe';
+    4) Run 'Git-2.19.1-64-bit.exe';
     3) Always click 'next';
     4) Click 'install'.
 7. The Java Development Kit (JDK) is an implementation of either one of the Java Platform, Standard Edition, Java Platform, 
