@@ -18,8 +18,10 @@ Tools setup:
     3) Click in drop down menu 'Run 'BadCodeExample4''.
 4. To run tests in Firefox version 48 or newer you need to have a geckodriver.
    How to install 'geckodriver':
-    1) Download 'geckodriver';
-    2) Paste him in C:\Windows\System32
+    1) Go to https://github.com/mozilla/geckodriver/releases;
+    2) Download 'geckodriver-v0.23.0-win64.zip';
+    3) Copy archive content;
+    4) Paste archive content in C:\Windows\System32
 5. Selenium is a tool for automating web browser actions.
    How to install 'Selenium Java » 3.14.0':
     1) Go to https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.14.0;
