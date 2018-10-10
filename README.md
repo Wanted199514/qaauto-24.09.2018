@@ -29,7 +29,7 @@ Tools setup:
     3) Open pom.xml in Intellij IDEA;
     4) In pom.xml before '</project>' write '<dependencies>';
     5) Paste Maven text after '<dependencies>';
-    6) Write after Maven text '</dependencies>'.
+    6) Write after Maven text '</ependencies>'.
 6. Git is a version-control system for tracking changes in computer files and coordinating work on those files 
    among multiple people. It is primarily used for source-code management in software development.
    How to install 'Git':
