@@ -13,9 +13,9 @@ Tools setup:
    is identified as well as the project itself - a groupId, artifactId, version (GAV) troika.
 2. .gitIgnore is used to specify in it files and folders that must be hidden from the git version control system.
 3. How to run the current test script:
-    1) Choose 'BadCodeExample4.java'
+    1) Choose 'BadCodeExample.java'
     2) Click on menu bar 'Run'.
-    3) Click in drop down menu 'Run 'BadCodeExample4''.
+    3) Click in drop down menu 'Run 'BadCodeExample''.
 4. To run tests in Firefox version 48 or newer you need to have a geckodriver.
    How to install 'geckodriver':
     1) Go to https://github.com/mozilla/geckodriver/releases;
