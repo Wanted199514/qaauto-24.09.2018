@@ -7,6 +7,7 @@ Tools installation:
 4. Intellij IDEA 'Community' version;
 5. Selenium Java » 3.14.0;
 6. Git
+7. TestNG
 
 Tools setup:
 1. pom.xml - the list of all libraries (dependencies) that are used in the project is stored here. Each library
@@ -51,15 +52,21 @@ Tools setup:
     6) Install 'jdk-10.0.2_windows-x64_bin.exe'.
 8. IntelliJ IDEA is a Java integrated development environment (IDE) for developing computer software.
    How to install 'IntelliJ IDEA':
-   1) Go to https://www.jetbrains.com/idea/download/#section=windows;
-   2) Click 'Download' for Community version;
-   3) Download 'ideaIC-2018.2.4.exe';
-   4) Run 'ideaIC-2018.2.4.exe';
-   5) Install 'IntelliJ IDEA'.
+    1) Go to https://www.jetbrains.com/idea/download/#section=windows;
+    2) Click 'Download' for Community version;
+    3) Download 'ideaIC-2018.2.4.exe';
+    4) Run 'ideaIC-2018.2.4.exe';
+    5) Install 'IntelliJ IDEA'.
 9. Mozilla Firefox (or simply Firefox) is a free and open-source web browser developed by Mozilla Foundation and its subsidiary,        Mozilla Corporation.
    How to install 'Mozilla Firefox':
-   1) Go to https://www.mozilla.org/en-US/firefox/new/;
-   2) Click 'Download Now';
-   3) Download 'Firefox Installer.exe';
-   4) Run 'Firefox Installer.exe';
-   5) Install 'Mozilla Firefox'.
+    1) Go to https://www.mozilla.org/en-US/firefox/new/;
+    2) Click 'Download Now';
+    3) Download 'Firefox Installer.exe';
+    4) Run 'Firefox Installer.exe';
+    5) Install 'Mozilla Firefox'.
+10. TestNG - a testing framework for the JVM.
+    How to install 'TestNG':
+    1) Go to https://mvnrepository.com/artifact/org.testng/testng/6.14.3;
+    2) Copy Maven text;
+    3) Open pom.xml in Intellij IDEA;
+    4) In pom.xml before '</dependencies\>' paste Maven text.
