@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
 
-
     /**
      * PreConditions:
      * Open FF browser.
@@ -23,7 +22,7 @@ public class LoginTest {
     @Test
     public void successfullLoginTest() {
         WebDriver webDriver = new FirefoxDriver();
-        webDriver.navigate().to("https://www.linkedin.com/");
+        webDriver.get("https://www.linkedin.com/");
 
         Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.linkedin.com/", "Home page URL is wrong.");
 
