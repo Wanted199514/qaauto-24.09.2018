@@ -12,6 +12,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver webDriver) {
         this.webDriver = webDriver;
+        openLinkedinMainPage();
         initElements();
     }
 
@@ -21,6 +22,12 @@ public class LoginPage {
 
     public void assertHomePage() {
         Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.linkedin.com/feed/", "Home page URL is wrong.");
+    }
+
+    public void assertLoginSubmitPage() {
+        Assert.assertEquals(webDriver.getCurrentUrl(),
+                "https://www.linkedin.com/uas/login-submit?loginSubmitSource=GUEST_HOME",
+                "Login Submit page URL is wrong.");
     }
 
     public void initElements() {
@@ -33,5 +40,9 @@ public class LoginPage {
         userEmailField.sendKeys(userEmail);
         userPasswordField.sendKeys(userPassword);
         signInButton.click();
+    }
+
+    public void openLinkedinMainPage() {
+        webDriver.get("https://www.linkedin.com/");
     }
 }

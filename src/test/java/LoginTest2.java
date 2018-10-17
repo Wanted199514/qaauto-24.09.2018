@@ -17,6 +17,7 @@ public class LoginTest2 {
         webDriver.quit();
     }
 
+
     /**
      * PreConditions:
      * Open FF browser.
@@ -33,12 +34,9 @@ public class LoginTest2 {
      */
     @Test
     public void successfullLoginTest() {
-        webDriver.get("https://www.linkedin.com/");
         LoginPage loginPage = new LoginPage(webDriver);
 
         loginPage.assertLoginPage();
-
-        loginPage.initElements();
 
         loginPage.login("gdd0070@gmail.com","");
 
@@ -46,14 +44,24 @@ public class LoginTest2 {
     }
 
     @Test
-    public void negativeLoginTest() {
-        webDriver.get("https://www.linkedin.com/");
-        LoginPage incorrectLoginPage = new LoginPage(webDriver);
+    public void negativeLoginTestEmptyPassword() {
+        LoginPage loginPage = new LoginPage(webDriver);
 
-        incorrectLoginPage.assertLoginPage();
+        loginPage.assertLoginPage();
 
-        incorrectLoginPage.login("a@g.c","");
+        loginPage.login("a@g.c","");
 
-        incorrectLoginPage.assertLoginPage();
+        loginPage.assertLoginPage();
+    }
+
+    @Test
+    public void negativeLoginTestInvalidPassword() {
+        LoginPage loginPage = new LoginPage(webDriver);
+
+        loginPage.assertLoginPage();
+
+        loginPage.login("gdd0070@gmail.com","qwsf1236");
+
+        loginPage.assertLoginSubmitPage();
     }
 }
