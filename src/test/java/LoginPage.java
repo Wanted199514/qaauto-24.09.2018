@@ -4,11 +4,12 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginPage {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
-    WebElement signInButton;
-    WebElement userEmailField;
-    WebElement userPasswordField;
+    private WebElement signInButton;
+    private WebElement userEmailField;
+    private WebElement userPasswordField;
+    private WebElement me;
 
     public LoginPage(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -16,21 +17,24 @@ public class LoginPage {
         initElements();
     }
 
-    public void assertLoginPage() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.linkedin.com/", "Login page URL is wrong.");
+    public boolean assertLoginPageIsLoaded() {
+        /*Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.linkedin.com/", "Login page URL is wrong.");
+        Assert.assertEquals(webDriver.getTitle(),"LinkedIn: Войти или зарегистрироваться",
+                "Login page title is wrong.");
+        Assert.assertTrue(signInButton.isDisplayed(),"SignIn is not displayed on Login page.");*/
+        return webDriver.getCurrentUrl().equals("https://www.linkedin.com/")
+                && webDriver.getTitle().equals("LinkedIn: Войти или зарегистрироваться")
+                && signInButton.isDisplayed();
     }
 
-    public void assertHomePage() {
-        Assert.assertEquals(webDriver.getCurrentUrl(), "https://www.linkedin.com/feed/", "Home page URL is wrong.");
-    }
-
-    public void assertLoginSubmitPage() {
+    public boolean assertLoginSubmitPageIsLoaded() {
         Assert.assertEquals(webDriver.getCurrentUrl(),
                 "https://www.linkedin.com/uas/login-submit?loginSubmitSource=GUEST_HOME",
                 "Login Submit page URL is wrong.");
+        return webDriver.getCurrentUrl().equals("https://www.linkedin.com/uas/login-submit?loginSubmitSource=GUEST_HOME");
     }
 
-    public void initElements() {
+    private void initElements() {
         userEmailField = webDriver.findElement(By.id("login-email"));
         userPasswordField = webDriver.findElement(By.id("login-password"));
         signInButton = webDriver.findElement(By.id("login-submit"));
@@ -42,7 +46,7 @@ public class LoginPage {
         signInButton.click();
     }
 
-    public void openLinkedinMainPage() {
+    private void openLinkedinMainPage() {
         webDriver.get("https://www.linkedin.com/");
     }
 }
