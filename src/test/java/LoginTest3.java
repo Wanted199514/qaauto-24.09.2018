@@ -4,6 +4,7 @@
         import org.testng.Assert;
         import org.testng.annotations.AfterMethod;
         import org.testng.annotations.BeforeMethod;
+        import org.testng.annotations.DataProvider;
         import org.testng.annotations.Test;
 
 public class LoginTest3 {
@@ -17,6 +18,15 @@ public class LoginTest3 {
     @AfterMethod
     public void afterMethod() {
         webDriver.quit();
+    }
+
+    @DataProvider
+    public Object[][] validDataProvider() {
+        return new Object[][]{
+                { "gdd0070@gmail.com", "w19951491" },
+                { "GDD0070@gmail.com", "w19951491" },
+                { " gdd0070@gmail.com ", "w19951491" }
+        };
     }
 
 
@@ -34,15 +44,14 @@ public class LoginTest3 {
      * Postcondition:
      * - Close FF browser
      */
-    @Test
-    public void successfullLoginTest() {
+    @Test(dataProvider = "validDataProvider")
+    public void successfullLoginTest(String userEmail, String userPassword) {
         LoginPage loginPage = new LoginPage(webDriver);
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("gdd0070@gmail.com","");
+        HomePage homePage = loginPage.login(userEmail, userPassword);
 
-        HomePage homePage = new HomePage(webDriver);
         Assert.assertTrue(homePage.homePageIsLoaded(),"Home page is not loaded.");
     }
 
@@ -52,7 +61,7 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("a@g.c","");
+        loginPage.login("a@g.c", "");
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
     }
@@ -63,11 +72,10 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("gdd0070@gmail.com","g3434kd4");
+        LoginSubmitPage loginSubmitPage = loginPage.login("gdd0070@gmail.com","g3434kd4");
 
-        LoginSubmitPage loginSubmitPage = new LoginSubmitPage(webDriver);
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
-        Assert.assertTrue(webDriver.findElement(By.id("session_password-login-error")).isDisplayed(),
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
                 "Message 'Это неверный пароль. Повторите попытку или измените пароль.' is not loaded");
     }
 
@@ -88,11 +96,10 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("a@g.c","");
+        LoginSubmitPage loginSubmitPage = loginPage.login("a@g.c","");
 
-        LoginSubmitPage loginSubmitPage = new LoginSubmitPage(webDriver);
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailisLoaded(),
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
                 "Message 'Укажите действительный адрес эл. почты.' is not loaded");
     }
 
@@ -102,36 +109,11 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("ladfhlalf","");
+        LoginSubmitPage loginSubmitPage = loginPage.login("ladfhlalf","");
 
-        LoginSubmitPage loginSubmitPage = new LoginSubmitPage(webDriver);
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailisLoaded(),
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
                 "Message 'Укажите действительный адрес эл. почты.' is not loaded");
-    }
-
-    @Test
-    public void negativeWrongSyntaxEmailOnlyNumbers() {
-        LoginPage loginPage = new LoginPage(webDriver);
-
-        Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
-
-        loginPage.login("3124241234","");
-
-        CaptchaPage captchaPage = new CaptchaPage(webDriver);
-        Assert.assertTrue(captchaPage.captchaPageIsLoaded(),"Captcha page is not loaded.");
-    }
-
-    @Test
-    public void negativeWrongSyntaxPasswordOnlyNumbers() {
-        LoginPage loginPage = new LoginPage(webDriver);
-
-        Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
-
-        loginPage.login("gdd0070@gmail.com","1423412346");
-
-        CaptchaPage captchaPage = new CaptchaPage(webDriver);
-        Assert.assertTrue(captchaPage.captchaPageIsLoaded(),"Captcha page is not loaded.");
     }
 
     @Test
@@ -140,12 +122,11 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("ghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvb",
+        LoginSubmitPage loginSubmitPage = loginPage.login("ghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvb",
                 "");
 
-        LoginSubmitPage loginSubmitPage = new LoginSubmitPage(webDriver);
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailisLoaded(),
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
                 "Message 'Укажите действительный адрес эл. почты.' is not loaded");
     }
 
@@ -155,12 +136,39 @@ public class LoginTest3 {
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        loginPage.login("asdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfe",
+        LoginSubmitPage loginSubmitPage = loginPage.login("asdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfe",
                 "");
 
-        LoginSubmitPage loginSubmitPage = new LoginSubmitPage(webDriver);
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailisLoaded(),
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
                 "Message 'Слишком длинный текст: максимальная длина – 128 симв., введено 140 симв.' is not loaded");
+    }
+
+    @Test
+    public void negativePasswordBoundariesMoreMax128() {
+        LoginPage loginPage = new LoginPage(webDriver);
+
+        Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
+
+        LoginSubmitPage loginSubmitPage = loginPage.login("gdd0070@gmail.com",
+                "asdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfeasdwqasdfe");
+
+        Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
+                "Message 'Это неверный пароль. Повторите попытку или измените пароль.' is not loaded");
+    }
+
+    @Test
+    public void negativePasswordBoundariesMax128() {
+        LoginPage loginPage = new LoginPage(webDriver);
+
+        Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
+
+        LoginSubmitPage loginSubmitPage = loginPage.login("gdd0070@gmail.com",
+                "ghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvbnhghtyhgvb");
+
+        Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
+        Assert.assertTrue(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
+                "Message 'Это неверный пароль. Повторите попытку или измените пароль.' is not loaded");
     }
 }
