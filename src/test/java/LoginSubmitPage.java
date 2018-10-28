@@ -9,7 +9,7 @@ public class LoginSubmitPage {
     @FindBy(xpath = "//*[@id='global-alert-queue']")
     private WebElement loginSubmitPageisLoaded;
 
-    @FindBy(xpath = "//*[@session_key-login-error']")
+    @FindBy(xpath = "//*[@id='session_key-login-error']")
     private WebElement messageInputCorrectEmail;
 
     @FindBy(xpath = "//*[@id='session_password-login-error']")
