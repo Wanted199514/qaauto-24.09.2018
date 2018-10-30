@@ -9,11 +9,14 @@ public class LoginSubmitPage {
     @FindBy(xpath = "//*[@id='global-alert-queue']")
     private WebElement loginSubmitPageisLoaded;
 
-    @FindBy(xpath = "//*[@id='session_key-login-error']")
+    @FindBy(xpath = "//span[@id='session_key-login-error']")
     private WebElement messageInputCorrectEmail;
 
-    @FindBy(xpath = "//*[@id='session_password-login-error']")
+    @FindBy(xpath = "//span[@id='session_password-login-error']")
     private WebElement messageInputCorrectPassword;
+
+    @FindBy(xpath = "//div[@role='alert']")
+    private WebElement getAlertMessageText;
 
     public LoginSubmitPage(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -26,11 +29,16 @@ public class LoginSubmitPage {
                 && loginSubmitPageisLoaded.isDisplayed();
     }
 
-    public boolean messageInputCorrectEmailIsLoaded() {
-        return messageInputCorrectEmail.isDisplayed();
+    public String messageInputCorrectEmailIsLoaded() {
+        return messageInputCorrectEmail.getText();
     }
 
-    public boolean messageInputCorrectPasswordIsLoaded() {
-        return messageInputCorrectPassword.isDisplayed();
+    public String messageInputCorrectPasswordIsLoaded() {
+        return messageInputCorrectPassword.getText();
+    }
+
+
+    public String getAlertMessageTextIsLoaded() {
+        return getAlertMessageText.getText();
     }
 }

@@ -8,12 +8,14 @@
 
 public class LoginTest3 {
     WebDriver webDriver;
+    LoginPage loginPage;
     String userValidEmail = "gdd0070@gmail.com";
     String userValidPassword = "";
 
     @BeforeMethod
     public void beforeMethod() {
         webDriver = new FirefoxDriver();
+        loginPage = new LoginPage(webDriver);
     }
 
     @AfterMethod
@@ -22,13 +24,13 @@ public class LoginTest3 {
     }
 
     @DataProvider
-    public Object[][] successfullValidDataProvider() {
+    public Object[][] validationMessagesCombinations() {
         String userValidEMail = this.userValidEmail;
         String userValidPassword = this.userValidPassword;
         return new Object[][]{
                 { userValidEMail, userValidPassword },
                 { "GDD0070@gmail.com", userValidPassword },
-                { " gdd0070@gmail.com ", userValidPassword }
+                { " " + userValidEMail + " ", userValidPassword }
         };
     }
 
@@ -53,7 +55,7 @@ public class LoginTest3 {
     public Object[][] negativeValidDataProviderLoginPage() {
         return new Object[][]{
                 { "a@g.c", "" },
-                { "", "w19951491" }
+                { "", "jdlajdl" }
         };
     }
 
@@ -72,10 +74,8 @@ public class LoginTest3 {
      * Postcondition:
      * - Close FF browser
      */
-    @Test(dataProvider = "successfullValidDataProvider")
+    @Test(dataProvider = "validationMessagesCombinations")
     public void successfullLoginTest(String userEmail, String userPassword) {
-        LoginPage loginPage = new LoginPage(webDriver);
-
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
         HomePage homePage = loginPage.login(userEmail, userPassword);
@@ -84,25 +84,23 @@ public class LoginTest3 {
     }
 
     @Test(dataProvider = "negativeValidDataProviderLoginSubmitPage")
-    public void negativeLoginTestLoginSubmitPage(String userEmail, String userPassword, String emailValidationMessage, String passwordValidationMessage) {
-        LoginPage loginPage = new LoginPage(webDriver);
-
+    public void validationMessagesInvalidEmailPasswordTest(String userEmail, String userPassword, String emailValidationMessage, String passwordValidationMessage) {
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
         LoginSubmitPage loginSubmitPage = loginPage.login(userEmail, userPassword);
 
-        Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
+        Assert.assertEquals(loginSubmitPage.getAlertMessageTextIsLoaded(),
+                "При заполнении формы были допущены ошибки. Проверьте и исправьте отмеченные поля.",
+                "Submit page is not loaded.");
 
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
-                "Message '" + emailValidationMessage + "' is not loaded.");
-        Assert.assertTrue(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
-                "Message '" + passwordValidationMessage + "' is not loaded.");
+        Assert.assertEquals(loginSubmitPage.messageInputCorrectEmailIsLoaded(),
+                emailValidationMessage, "Email validation message is wrong.");
+        Assert.assertEquals(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
+                passwordValidationMessage, "Password validation message is wrong.");
     }
 
     @Test(dataProvider = "negativeValidDataProviderLoginPage")
     public void negativeLoginTestLoginPage(String userEmail, String userPassword) {
-        LoginPage loginPage = new LoginPage(webDriver);
-
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
         loginPage.login(userEmail, userPassword);
@@ -110,7 +108,7 @@ public class LoginTest3 {
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
     }
 
-    @Test
+    /*@Test
     public void negativeLoginTestEmptyPassword() {
         LoginPage loginPage = new LoginPage(webDriver);
 
@@ -225,5 +223,5 @@ public class LoginTest3 {
         Assert.assertTrue(loginSubmitPage.loginSubmitPageIsLoaded(),"Submit page is not loaded.");
         Assert.assertTrue(loginSubmitPage.messageInputCorrectPasswordIsLoaded(),
                 "Message 'Это неверный пароль. Повторите попытку или измените пароль.' is not loaded");
-    }
+    }*/
 }
