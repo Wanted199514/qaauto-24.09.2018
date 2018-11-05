@@ -37,7 +37,6 @@ public class LoginSubmitPage {
         return messageInputCorrectPassword.getText();
     }
 
-
     public String getAlertMessageTextIsLoaded() {
         return getAlertMessageText.getText();
     }

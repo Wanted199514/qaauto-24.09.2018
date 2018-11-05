@@ -17,6 +17,9 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id='login-password']")
     private WebElement userPasswordField;
 
+    @FindBy(xpath = "//*[@id='layout-main']/div/div[1]/div/form/a")
+    private WebElement resetPasswordButton;
+
     public LoginPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         openLinkedinMainPage();
@@ -27,6 +30,11 @@ public class LoginPage {
         return webDriver.getCurrentUrl().equals("https://www.linkedin.com/")
                 && webDriver.getTitle().equals("LinkedIn: Войти или зарегистрироваться")
                 && signInButton.isDisplayed();
+    }
+
+    public ForgotPasswordPage resetPassword() {
+        resetPasswordButton.click();
+        return new ForgotPasswordPage(webDriver);
     }
 
     public <T> T login(String userEmail, String userPassword) {

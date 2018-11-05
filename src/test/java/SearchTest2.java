@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +11,12 @@ import java.util.List;
 
 import static java.lang.Thread.sleep;
 
-public class SearchTest {
+public class SearchTest2 {
     WebDriver webDriver;
     LoginPage loginPage;
+
+    String userValidEmail = "gdd0070@gmail.com";
+    String userValidPassword = "";
 
     @BeforeMethod
     public void beforeMethod() {
@@ -45,35 +47,31 @@ public class SearchTest {
      */
     @Test
     public void basicSearchTest() throws InterruptedException {
-        /*Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
+        String searchTerm = "Jack";
+
+        Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
         HomePage homePage = loginPage.login(userValidEmail, userValidPassword);
 
         Assert.assertTrue(homePage.homePageIsLoaded(),"Home page is not loaded.");
 
-        SearchPage searchPage = homePage.setSearchTerm("Jack");
+        SearchPage searchPage = homePage.setSearchTerm(searchTerm);
 
-        sleep(5000);
-
-        *//*JavascriptExecutor javascriptExecutor = (JavascriptExecutor) webDriver;
-        javascriptExecutor.executeScript("window.scrollBy(0,1000)", "");*//*
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) webDriver;
+        javascriptExecutor.executeScript("window.scrollBy(0,1000)", "");
 
         Assert.assertTrue(searchPage.searchPageIsLoaded(), "Search page is not loaded.");
 
-        Assert.assertTrue(searchPage.searchResultsIsLoaded(),"searchResults is not loaded.");
+        Assert.assertEquals(searchPage.searchResultsIsLoaded(), 10,"searchResults count is wrong.");
 
-        List<WebElement> searchResults = searchPage.searchReultsFoundSearchTerm();
-        for (WebElement searchResult:
-             searchResults) {
-            String searchResultText = searchResult.getText();
-            Assert.assertTrue(searchResultText.contains(homePage.searchTerm),"SearchTerm \""+ homePage.searchTerm +"\" not found.");*/
+        /*Assert.assertTrue(searchPage.getSearchResults().contains(searchTerm),"SearchTerm \""+ searchTerm +"\" not found.");*/
 
-            /*if (searchResults.size() > 0) {
-                System.out.println("\nsearchTerm was found");
-            }
-            else {
-                System.out.println("\nsearchTerm not found");
-            }*/
-        //medium application, android, хабл, medium
+        List<String> searchResultsList = searchPage.getSearchResults();
+
+        for (String searchResult:
+             searchResultsList) {
+            Assert.assertTrue(searchResult.toLowerCase().contains(searchTerm.toLowerCase()),
+                    "SearchTerm \""+ searchTerm +"\" not found in "+searchPage.searchResultsIsLoaded()+".");
+        }
     }
 }
