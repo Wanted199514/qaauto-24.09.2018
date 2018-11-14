@@ -4,12 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.*;
 
-import static java.lang.Thread.sleep;
-
 public class ResetPasswordTest extends BaseTest {
 
     @Test
-    public void resetPasswordSuccessful() throws InterruptedException {
+    public void resetPasswordSuccessful() {
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
         ForgotPasswordPage forgotPasswordPage = loginPage.resetPassword();
@@ -20,13 +18,13 @@ public class ResetPasswordTest extends BaseTest {
 
         Assert.assertTrue(checkpointPage.checkpointPageIsLoaded(),"Checkpoint Page is not loaded.");
 
-        PasswordResetPage passwordResetPage = checkpointPage.recendUrl();
+        checkpointPage.resendUrl();
 
-        //sleep(30000);
+        PasswordResetPage passwordResetPage = checkpointPage.openURL();
 
         Assert.assertTrue(passwordResetPage.passwordResetPageIsLoaded(),"Password reset page is not loaded.");
 
-        CheckpointSucessfulChangePasswordPage checkpointSucessfulChangePasswordPage = passwordResetPage.createNewPassword(userValidPassword, userValidPassword);
+        CheckpointSucessfulChangePasswordPage checkpointSucessfulChangePasswordPage = passwordResetPage.createNewPassword(userValidLinkedinPassword, userValidLinkedinPassword);
 
         Assert.assertTrue(checkpointSucessfulChangePasswordPage.checkpointSucessfulPasswordPageIsLoaded(),"Checkpoint sucessful password page is not loaded.");
 

@@ -2,6 +2,7 @@ package util;
 
 
 import com.sun.mail.imap.IdleManager;
+import test.BaseTest;
 
 import javax.mail.*;
 import javax.mail.event.MessageCountAdapter;
@@ -27,7 +28,7 @@ public class GMailService {
      * @param args - dummy args for main()
      */
     public static void main(String[] args) {
-        String messageSubject = "Linkedin";
+        String messageSubject = "LinkedIn";
         String messageTo = "test199514@gmail.com";
         String messageFrom = "security-noreply@linkedin.com";
 

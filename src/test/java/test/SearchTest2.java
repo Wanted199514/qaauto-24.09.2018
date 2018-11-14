@@ -1,18 +1,11 @@
 package test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import page.HomePage;
-import page.LoginPage;
 import page.SearchPage;
 
 import java.util.List;
-
-import static java.lang.Thread.sleep;
 
 public class SearchTest2 extends BaseTest {
 
@@ -33,12 +26,12 @@ public class SearchTest2 extends BaseTest {
      * - Close Browser.
      */
     @Test
-    public void basicSearchTest() throws InterruptedException {
+    public void basicSearchTest() {
         String searchTerm = "Jack";
 
         Assert.assertTrue(loginPage.loginPageIsLoaded(),"Login page is not loaded.");
 
-        HomePage homePage = loginPage.login(userValidEmail, userValidPassword);
+        HomePage homePage = loginPage.login(userValidEmail, userValidLinkedinPassword);
 
         Assert.assertTrue(homePage.homePageIsLoaded(),"Home page is not loaded.");
 

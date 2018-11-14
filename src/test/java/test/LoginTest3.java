@@ -11,10 +11,9 @@ public class LoginTest3 extends BaseTest {
     @DataProvider
     public Object[][] validationMessagesCombinations() {
         String userValidEMail = this.userValidEmail;
-        String userValidPassword = this.userValidPassword;
+        String userValidPassword = this.userValidLinkedinPassword;
         return new Object[][]{
                 { userValidEMail, userValidPassword },
-                { "GDD0070@gmail.com", userValidPassword },
                 { " " + userValidEMail + " ", userValidPassword }
         };
     }
@@ -22,7 +21,7 @@ public class LoginTest3 extends BaseTest {
     @DataProvider
     public Object[][] negativeValidDataProviderLoginSubmitPage() {
         String userValidEMail = this.userValidEmail;
-        String userValidPassword = this.userValidPassword;
+        String userValidPassword = this.userValidLinkedinPassword;
         String emailValidationMessage = "Укажите действительный адрес эл. почты.";
         String passwordValidationMessage = "Это неверный пароль. Повторите попытку или измените пароль.";
         return new Object[][]{

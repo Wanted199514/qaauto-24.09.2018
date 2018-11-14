@@ -1,0 +1,17 @@
+page\LoginSubmitPage.class
+test\BaseTest.class
+test\LoginTest.class
+test\SearchTest.class
+test\LoginTest3.class
+page\CheckpointPage.class
+page\CheckpointSucessfulChangePasswordPage.class
+page\LoginPage.class
+test\ResetPasswordTest.class
+page\PasswordResetPage.class
+test\SearchTest2.class
+page\HomePage.class
+page\BasePage.class
+page\ForgotPasswordPage.class
+util\GMailService$1.class
+util\GMailService.class
+page\SearchPage.class

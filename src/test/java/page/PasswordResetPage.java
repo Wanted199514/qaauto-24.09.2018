@@ -3,10 +3,8 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class PasswordResetPage extends BasePage {
-    private WebDriver webDriver;
 
     @FindBy(xpath = "//*[@id='newPassword']")
     private WebElement newPasswordTerm;
@@ -20,10 +18,18 @@ public class PasswordResetPage extends BasePage {
     @FindBy(xpath = "//*[@id='reset-password-submit-button']")
     private WebElement resetPasswordButton;
 
+    /**
+     * Initialization of page elements
+     * @param webDriver
+     */
     public PasswordResetPage(WebDriver webDriver) {
         initialization(webDriver);
     }
 
+    /**
+     * check if this page is loaded
+     * @return
+     */
     public boolean passwordResetPageIsLoaded() {
         return webDriver.getCurrentUrl().contains("https://www.linkedin.com/checkpoint/rp/password-reset?requestSubmissionId=")
                 && webDriver.getTitle().equals("Изменить пароль | LinkedIn")
@@ -31,6 +37,12 @@ public class PasswordResetPage extends BasePage {
     }
 
 
+    /**
+     * create new password
+     * @param newPassword
+     * @param confirmPassword
+     * @return
+     */
     public CheckpointSucessfulChangePasswordPage createNewPassword(String newPassword, String confirmPassword) {
         newPasswordTerm.sendKeys(newPassword);
         confirmPasswordTerm.sendKeys(confirmPassword);

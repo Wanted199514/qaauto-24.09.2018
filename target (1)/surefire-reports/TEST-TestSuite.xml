@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="219.727" tests="9" errors="0" skipped="0" failures="9">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="10"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018\target\test-classes;C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018\target\classes;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\gdd00\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\gdd00\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\gdd00\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\gdd00\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\gdd00\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\gdd00\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\gdd00\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\gdd00\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\gdd00\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\gdd00\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\gdd00\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\gdd00\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\gdd00\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\gdd00\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\gdd00\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\gdd00\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\gdd00\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\gdd00\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\gdd00\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\gdd00\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\gdd00\.m2\repository\org\apache\commons\commons-lang3\3.6\commons-lang3-3.6.jar;C:\Users\gdd00\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\gdd00\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
+    <property name="java.vm.vendor" value="&quot;Oracle Corporation&quot;"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="suiteXmlFile" value="login-tests.xml"/>
+    <property name="java.vm.specification.version" value="10"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-10.0.2\bin"/>
+    <property name="sun.java.command" value="C:\Users\gdd00\AppData\Local\Temp\surefire13554627816501939996\surefirebooter17239908920962639821.jar C:\Users\gdd00\AppData\Local\Temp\surefire13554627816501939996 2018-11-12T21-38-53_775-jvmRun1 surefire7383859719088171321tmp surefire_03080780774504211416tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018\target\test-classes;C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018\target\classes;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-java\3.14.0\selenium-java-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-api\3.14.0\selenium-api-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.14.0\selenium-chrome-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.14.0\selenium-edge-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.14.0\selenium-firefox-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.14.0\selenium-ie-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.14.0\selenium-opera-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.14.0\selenium-remote-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.14.0\selenium-safari-driver-3.14.0.jar;C:\Users\gdd00\.m2\repository\org\seleniumhq\selenium\selenium-support\3.14.0\selenium-support-3.14.0.jar;C:\Users\gdd00\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\gdd00\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\gdd00\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\gdd00\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\gdd00\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\gdd00\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\gdd00\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\gdd00\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\gdd00\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\gdd00\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\gdd00\.m2\repository\org\apache\httpcomponents\httpclient\4.5.5\httpclient-4.5.5.jar;C:\Users\gdd00\.m2\repository\org\apache\httpcomponents\httpcore\4.4.9\httpcore-4.4.9.jar;C:\Users\gdd00\.m2\repository\com\squareup\okhttp3\okhttp\3.10.0\okhttp-3.10.0.jar;C:\Users\gdd00\.m2\repository\com\squareup\okio\okio\1.14.1\okio-1.14.1.jar;C:\Users\gdd00\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\gdd00\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\gdd00\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\gdd00\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\gdd00\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\gdd00\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\gdd00\.m2\repository\org\apache\commons\commons-lang3\3.6\commons-lang3-3.6.jar;C:\Users\gdd00\.m2\repository\org\apache\maven\surefire\surefire-testng-utils\2.21.0\surefire-testng-utils-2.21.0.jar;C:\Users\gdd00\.m2\repository\org\apache\maven\surefire\surefire-grouper\2.21.0\surefire-grouper-2.21.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\gdd00"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2018-07-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-10.0.2"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\gdd00\AppData\Local\Temp\surefire13554627816501939996\surefirebooter17239908920962639821.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="10.0.2+13"/>
+    <property name="user.name" value="gdd00"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.3"/>
+    <property name="localRepository" value="C:\Users\gdd00\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\gdd00\AppData\Local\Temp\"/>
+    <property name="java.version" value="10.0.2"/>
+    <property name="user.dir" value="C:\Users\gdd00\Google Диск\QA Start Up\QA Automation\qaauto-24.09.2018"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-10.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Borland\Delphi7\Bin;C:\Program Files (x86)\Borland\Delphi7\Projects\Bpl;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files\Git\cmd;C:\maven\bin;C:\Users\gdd00\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="10.0.2+13"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="54.0"/>
+  </properties>
+  <testcase name="successfullLoginTest" classname="test.LoginTest3" time="0.024">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.successfullLoginTest(LoginTest3.java:63)
+</failure>
+    <system-err><![CDATA[1542051546744	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.4eNXYLYbiaAh"
+1542051563524	Marionette	INFO	Listening on port 54203
+[Child 8328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1542051563668	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051563798	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051563862	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:39:23 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051564303	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051565484	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051566803	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051567231	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="successfullLoginTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.successfullLoginTest(LoginTest3.java:63)
+</failure>
+    <system-err><![CDATA[1542051567406	Marionette	INFO	Stopped listening on port 54203
+[Child 6464, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 7572, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 14724, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel error: cannot send/recv
+
+[GPU 2728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051574825	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.Arw3bix5D41f"
+1542051584739	Marionette	INFO	Listening on port 54266
+1542051585153	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051585247	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051585291	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:39:45 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051585350	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051586037	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051587468	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051587985	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051588067	Marionette	INFO	Stopped listening on port 54266
+[Child 216, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051594748	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.mEQfiEyG16oI"
+1542051604395	Marionette	INFO	Listening on port 54313
+1542051604851	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051605025	Marionette	DEBUG	[4294967297] Frame script loaded
+1542051605045	Marionette	DEBUG	[4294967297] Frame script registered
+нояб. 12, 2018 9:40:05 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051605153	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1542051605938	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1542051646578	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051661522	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0.001">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051661568	Marionette	INFO	Stopped listening on port 54313
+[Child 8348, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8348, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 8228, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051664865	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.Pg2fRnHzVGAr"
+1542051671117	Marionette	INFO	Listening on port 54438
+1542051671527	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051671619	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051671628	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:41:11 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051671694	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051685028	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051687086	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051687341	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051687375	Marionette	INFO	Stopped listening on port 54438
+[Parent 3076, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051690012	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.V2IQsDr9cQja"
+1542051695765	Marionette	INFO	Listening on port 54482
+1542051696333	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051696491	Marionette	DEBUG	[4294967297] Frame script loaded
+1542051696595	Marionette	DEBUG	[4294967297] Frame script registered
+нояб. 12, 2018 9:41:36 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051696636	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1542051697514	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1542051698677	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051699183	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0.001">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051699229	Marionette	INFO	Stopped listening on port 54482
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 3912, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051702112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.lhb7BPwOGV23"
+1542051709838	Marionette	INFO	Listening on port 54525
+1542051709934	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051710018	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051710022	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:41:50 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051710062	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051711511	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051712578	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051713300	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051713329	Marionette	INFO	Stopped listening on port 54525
+[Child 1916, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 1204, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[GPU 11076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051716487	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.Mc4ZO8BiyQvD"
+1542051722657	Marionette	INFO	Listening on port 54575
+1542051722970	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051723154	Marionette	DEBUG	[4294967297] Frame script loaded
+1542051723163	Marionette	DEBUG	[4294967297] Frame script registered
+нояб. 12, 2018 9:42:03 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051723211	Marionette	DEBUG	[4294967297] Received DOM event beforeunload for about:blank
+1542051723968	Marionette	DEBUG	[4294967297] Received DOM event pagehide for about:blank
+1542051725466	Marionette	DEBUG	[4294967297] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051726763	Marionette	DEBUG	[4294967297] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051726798	Marionette	INFO	Stopped listening on port 54575
+[Child 5536, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051730224	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.LZ2X6Jw9OAyf"
+1542051737333	Marionette	INFO	Listening on port 54617
+1542051737412	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051737512	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051737520	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:42:17 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051737602	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051738310	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051739739	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051739985	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+  <testcase name="validationMessagesInvalidEmailPasswordTest" classname="test.LoginTest3" time="0">
+    <failure message="Login page is not loaded. expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: Login page is not loaded. expected [true] but found [false]
+	at test.LoginTest3.validationMessagesInvalidEmailPasswordTest(LoginTest3.java:72)
+</failure>
+    <system-err><![CDATA[1542051740033	Marionette	INFO	Stopped listening on port 54617
+[Child 13780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 12728, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1542051744062	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gdd00\\AppData\\Local\\Temp\\rust_mozprofile.bphahep428fR"
+1542051750272	Marionette	INFO	Listening on port 54665
+1542051750565	Marionette	WARN	TLS certificate errors will be ignored for this session
+1542051750726	Marionette	DEBUG	[6442450945] Frame script loaded
+1542051750817	Marionette	DEBUG	[6442450945] Frame script registered
+нояб. 12, 2018 9:42:30 ПП org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1542051750877	Marionette	DEBUG	[6442450945] Received DOM event beforeunload for about:blank
+1542051751636	Marionette	DEBUG	[6442450945] Received DOM event pagehide for about:blank
+1542051754382	Marionette	DEBUG	[6442450945] Received DOM event DOMContentLoaded for https://www.linkedin.com/
+1542051754994	Marionette	DEBUG	[6442450945] Received DOM event pageshow for https://www.linkedin.com/
+]]></system-err>
+  </testcase>
+</testsuite>

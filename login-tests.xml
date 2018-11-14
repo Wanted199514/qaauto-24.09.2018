@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="All login tests">
+
+    <test name="positive">
+        <classes>
+            <class name="test.LoginTest3">
+                <methods>
+                    <include name="successfullLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="negative">
+        <classes>
+            <class name="test.LoginTest3">
+                <methods>
+                    <include name="validationMessagesInvalidEmailPasswordTest"/>
+                    <include name="negativeLoginWithEmptyPasswordTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
